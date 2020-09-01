@@ -68,44 +68,6 @@ public class Main {
     }
 
     private static boolean CheckWin(char pClient) {
-        boolean xCheck ;
-        for(int i = 0; i< Map.length;i++) {
-            xCheck = true;
-            for (int j = 0; j < Map[i].length; j++){
-                xCheck = xCheck&& Map[i][j]==pClient;
-            }
-            if(xCheck)
-                return xCheck;
-        }
-
-        for(int i = 0; i< Map.length;i++) {
-            xCheck = true;
-            for (int j = 0; j < Map[i].length; j++){
-                xCheck = xCheck&& Map[j][i]==pClient;
-            }
-            if(xCheck)
-                return xCheck;
-        }
-        xCheck = true;
-        for(int i = 0; i< Map.length;i++) {
-
-            for (int j = 0; j < Map[i].length; j++){
-                if(i==j)
-                    xCheck = xCheck&& Map[i][j]==pClient;
-            }
-        }
-        if(xCheck)
-            return xCheck;
-
-        xCheck = true;
-        for(int i = 0; i< Map.length;i++) {
-            for (int j = 0; j < Map[i].length; j++){
-                if(i+j==Size-1)
-                    xCheck = xCheck&& Map[i][j]==pClient;
-            }
-        }
-        if(xCheck)
-            return xCheck;
 
         return false;
     }
